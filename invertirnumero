@@ -1,0 +1,39 @@
+using System;
+
+namespace Inviertenumeroforwhile
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingrese Numero: ");
+            int Numero = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Invierte Numero :"+InvertirNumero(Numero).ToString());
+            Console.ReadKey();
+
+        }
+        public static int InvertirNumero(int numero)
+        {
+            int cuenta = 0;
+            int copia = numero;
+            while (copia != 0)
+            {
+                cuenta++;
+                copia /= 10;
+            }
+
+            int multplica = (int)Math.Pow((double)10, (double)cuenta - 1);
+            int acumula = 0;
+            while (numero != 0)
+            {
+                int cifra = numero % 10;
+                acumula += cifra * multplica;
+                multplica /= 10;
+                numero /= 10;
+            }
+
+
+            return acumula;
+        }
+    }
+}
