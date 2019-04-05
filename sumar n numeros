@@ -1,0 +1,56 @@
+using System;
+
+namespace Suma_de_n_numeros_pares
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] a = new int[10];
+
+            int j = 0;
+
+            while (j < a.Length)
+            {
+                Console.WriteLine("Ingrese el valor para la posicion " + j);
+                a[j] = Convert.ToInt32(Console.ReadLine());
+                j++;
+
+           }
+
+            Program objet = new Program();
+            objet.SumadePares(a);
+        }
+
+        public void SumadePares(int[] a)
+        {
+            int sumapares = 0;
+      
+            Console.WriteLine("Valores de las entradas :");
+            for (int i = 0; i < a.Length; i++)
+            {
+                Console.WriteLine("posicion :" + i + "es :" + a[i]);
+            }
+
+            Console.WriteLine("Numeros pares :");
+            for (int j = 0; j < a.Length; j++)
+            {
+                if (a[j] % 2 == 0)
+                {
+                    if (a[j] != 6 && a[j] !=10 )
+                    {
+                        
+                            sumapares += a[j];
+
+                        
+                    }
+                }
+               
+               }
+            Console.WriteLine("La suma de pares es " + sumapares);
+           
+
+            Console.ReadKey();
+        }
+    }
+}
