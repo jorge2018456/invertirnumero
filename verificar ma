@@ -1,0 +1,26 @@
+using System;
+
+namespace macvalida
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            String Mac ="0A8B7C5D8A6P";
+
+
+            if (Mac.Length == 12 || Mac.Contains("A")|| Mac.Contains("B")|| Mac.Contains("C")|| Mac.Contains("D")|| Mac.Contains("E")||Mac.Contains("F"))
+            {
+                Console.WriteLine("Mac Valida");
+
+            }
+            else
+            {
+                Console.WriteLine("Mac InValida");
+            }
+
+            Console.ReadKey();
+        }
+       
+    }
+}
