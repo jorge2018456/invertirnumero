@@ -1,0 +1,43 @@
+using System;
+
+namespace evaluar
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            String numero;
+
+            Console.WriteLine("Ingrese el numero :");
+            numero = Console.ReadLine();
+
+
+
+            if (!Int64.TryParse(numero, out Int64 result))
+            {
+                Console.WriteLine("Error  numero invalido : " + numero);
+
+            }
+            else
+            {
+
+                if (numero.Length == 8)
+                {
+                    Console.WriteLine("Es Dni");
+
+                }
+                else if (numero.Length < 12 && numero.Length > 10)
+                {
+                    Console.WriteLine("Es Ruc");
+                }
+
+            }
+
+
+
+
+            Console.ReadKey();
+
+        }
+    }
+}
